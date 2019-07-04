@@ -7,12 +7,13 @@ const db = require('./index.js')
 mongoose.Promise = global.Promise
 
 const houseSchema = new mongoose.Schema({
+
+  id: Number,
   price: String,
   bedrooms: Number,
   bathrooms: Number,
   sqft: String,
   address: String,
-  imageUrl: String
 })
 
 const house = mongoose.model('house', houseSchema)
