@@ -1,23 +1,11 @@
-// import db from './index.js'
 const db = require("./index.js");
-// import houseSchema from './houseSchema'
 const houseSchema = require("./houseSchema.js");
-
-const homeData = [
-  {
-    id: 0,
-    price: "$28,000,000",
-    bedrooms: 4,
-    bathrooms: 7,
-    sqft: "10,755",
-    address: "2247 Evergreen Point Rd, Medina, WA, 98039"
-  }
-];
-
+const faker = require("faker");
+// import faker from 'faker';
 const houseGen = () => {
   let houseArr = [];
 
-  for (let i = 1; i < 100; i++) {
+  for (let i = 1; i <= 100; i++) {
     const House = {
       id: i,
       price: faker.finance.amount(550000, 5000000, 0),
@@ -27,20 +15,18 @@ const houseGen = () => {
       address: `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()}, ${faker.address.zipCode()}`
     };
     houseArr.push(House);
-    console.log(houseArr);
   }
+  console.log(houseArr);
   return houseArr;
 };
 
-const inserthomeData = () => {
-
-    const houses = houseGen()
-    for (let house of houses) {
-        houseSchema.create(house)
-
-    }
-
-    Promise.all(arrayOfPromises)
+const inserthomeData = function () {
+  const houses = houseGen();
+  const promises = [];
+  for (const house of houses) {
+    promises.push(houseSchema.create(house));
+  }
+  Promise.all(promises).then(() => db.disconnect());
 };
 
 inserthomeData();

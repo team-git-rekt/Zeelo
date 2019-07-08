@@ -1,14 +1,18 @@
-const express = require('express')
-
-const House = require('./api/house')
-
+const express = require('express');
+const House = require('./api/house');
 const app = express();
-const port = 4000
+const port = 4000;
+const bodyParser = require('body-parser');
+const houseSchema = require('../zeelo-database/houseSchema.js');
 
-// app.get('/house', (req, res) => {
-//   res.json(House)
-// })``
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/../react-client/dist'));
+
+app.get('/houses', (req, res) => {
+  
+});
 
 app.listen(port, () => {
   console.log(`Server Starts at ${port}`)
-})
+});
