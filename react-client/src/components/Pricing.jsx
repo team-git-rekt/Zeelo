@@ -10,7 +10,7 @@ const Pricing = () => {
     };
     getHouses();
   }, []);
-  
+
   return (
     <Fragment>
       {data.map((dt, i) => (
@@ -22,9 +22,10 @@ const Pricing = () => {
           <p>
             <strong>{dt.address}</strong>
           </p>
-          {/* make entire p disapear when scroll down */}
           <p>For Sale | Zestimate $900,000</p>
-          <p><strong>Est. payment: $2,384/mo</strong></p>
+          <p>
+            <strong>Est. payment: $2,384/mo</strong>
+          </p>
           <button>Contact Agent</button> <button>Schedule a tour</button>
         </div>
       ))}
