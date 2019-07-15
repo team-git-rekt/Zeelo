@@ -1,10 +1,5 @@
 import React, { useState, Fragment, useEffect } from "react";
 
-/**
- * @author
- * @function useStateEx
- **/
-
 const useStateEx = props => {
   const [name, setName] = useState("Lis");
   const [address, setAddress] = useState("");
