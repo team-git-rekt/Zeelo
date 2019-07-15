@@ -6,7 +6,7 @@ const Overview = () => {
       <p>
         <strong>Monthly cost</strong>
       </p>
-      <p>$2,384</p>
+      <p className='emc'>$2,384</p>
       <p>
         <strong>Estimated monthly cost</strong>
       </p>
