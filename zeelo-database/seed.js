@@ -16,6 +16,7 @@ const houseGen = () => {
     houseArr.push(House);
   }
   // console.log(houseArr);
+  console.log(houseArr);
   return houseArr;
 };
 
