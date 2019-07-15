@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Accordion, Card } from "react-bootstrap";
 import MortgageCalculator from "mortgage-calculator-react";
 
@@ -14,10 +14,10 @@ const Dropdown = () => {
             <Accordion.Collapse eventKey="0">
               <Card.Body>
                 <p>Home price</p>
-                <input type="text" />
+                <input type="text" placeholder='home price'/>
 
                 <p className="dwnPyTxt">Down payment</p>
-                <input type="text" />
+                <input type="text" placeholder='down payment'/>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
