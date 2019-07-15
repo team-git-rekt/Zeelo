@@ -26,7 +26,7 @@ const Pricing = () => {
           <p>
             <strong>Est. payment: $2,384/mo</strong>
           </p>
-          <button>Contact Agent</button> <button>Schedule a tour</button>
+          <button style={{ color: 'blue', backgroundColor: 'white', border: 'black' }}>Contact Agent</button> <button style={{ color: 'white', backgroundColor: 'blue' }}>Schedule a tour</button>
         </div>
       ))}
     </Fragment>
