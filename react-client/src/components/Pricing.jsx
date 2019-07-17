@@ -15,7 +15,7 @@ const Pricing = () => {
   return (
     <Fragment>
       {data.map((dt, i) => (
-        <nav key={i} className="staticMenu">
+        <div key={i}>
           <p>
             <strong>{`$${dt.price}`}</strong> {`${dt.bedrooms} bedrooms |`}{" "}
             {`${dt.sqft} sqft`}
@@ -35,7 +35,7 @@ const Pricing = () => {
           <button style={{ color: "white", backgroundColor: "blue" }}>
             Schedule a tour
           </button>
-        </nav>
+        </div>
       ))}
     </Fragment>
   );
