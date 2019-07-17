@@ -9,3 +9,7 @@
 .emc{
   color: green;
 }
+
+.staticMenu{
+  position: static;
+}

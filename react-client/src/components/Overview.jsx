@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 const Overview = () => {
   return (
     <Fragment>
+      <div>
       <p>
         <strong>Monthly cost</strong>
       </p>
@@ -10,6 +11,7 @@ const Overview = () => {
       <p>
         <strong>Estimated monthly cost</strong>
       </p>
+      </div>
     </Fragment>
   );
 };

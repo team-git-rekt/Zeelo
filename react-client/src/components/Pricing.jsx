@@ -1,11 +1,12 @@
 import React, { useState, Fragment, useEffect } from "react";
 import axios from "axios";
 const Pricing = () => {
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const getHouses = async () => {
-      let res = await axios.get("/houses/1");
+      let res = await axios.get("/houses/:id");
       setData(res.data);
     };
     getHouses();
@@ -14,7 +15,7 @@ const Pricing = () => {
   return (
     <Fragment>
       {data.map((dt, i) => (
-        <div key={i}>
+        <nav key={i} className="staticMenu">
           <p>
             <strong>{`$${dt.price}`}</strong> {`${dt.bedrooms} bedrooms |`}{" "}
             {`${dt.sqft} sqft`}
@@ -26,8 +27,15 @@ const Pricing = () => {
           <p>
             <strong>Est. payment: $2,384/mo</strong>
           </p>
-          <button style={{ color: 'blue', backgroundColor: 'white', border: 'black' }}>Contact Agent</button> <button style={{ color: 'white', backgroundColor: 'blue' }}>Schedule a tour</button>
-        </div>
+          <button
+            style={{ color: "blue", backgroundColor: "white", border: "black" }}
+          >
+            Contact Agent
+          </button>{" "}
+          <button style={{ color: "white", backgroundColor: "blue" }}>
+            Schedule a tour
+          </button>
+        </nav>
       ))}
     </Fragment>
   );
