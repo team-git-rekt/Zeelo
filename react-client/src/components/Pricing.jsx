@@ -6,7 +6,7 @@ const Pricing = () => {
 
   useEffect(() => {
     const getHouses = async () => {
-      let res = await axios.get("/houses/:id");
+      let res = await axios.get("/houses/1");
       setData(res.data);
     };
     getHouses();
