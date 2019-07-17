@@ -14,10 +14,10 @@ const Dropdown = () => {
             <Accordion.Collapse eventKey="0">
               <Card.Body>
                 <p>Home price</p>
-                <input type="text" placeholder='home price'/>
+                <input type="text" placeholder="home price" />
 
                 <p className="dwnPyTxt">Down payment</p>
-                <input type="text" placeholder='down payment'/>
+                <input type="text" placeholder="down payment" />
               </Card.Body>
             </Accordion.Collapse>
           </Card>
