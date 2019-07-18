@@ -1,14 +1,12 @@
 version: "3"
-
 services:
   web:
     build: .
     depends_on:
-      - 'database'
+      - mongo
     ports:
       - '3000:3000'
-
-  database:
-    image: mongo
+  mongo:
+    image: "mongo"
     ports:
       - "27017:27017"
