@@ -1,8 +1,8 @@
-// import mongoose from 'mongoose'
-const mongoose = require('mongoose')
 
-const mongoUri = 'mongodb://localhost/zeelo'
+const mongoose = require('mongoose');
 
-const db = mongoose.connect(mongoUri)
+const mongoUri = 'mongodb://mongo:27017/buttons';
 
-module.exports = db
+const db = mongoose.connect(mongoUri,  { useNewUrlParser: true });
+
+module.exports = db;

@@ -6,37 +6,40 @@ const Pricing = () => {
 
   useEffect(() => {
     const getHouses = async () => {
-      let res = await axios.get("/houses/1");
+      let res = await axios.get("http://localhost:3000:houses/1");
       setData(res.data);
     };
     getHouses();
+    // preventDefault()
   }, []);
 
   return (
     <Fragment>
-      {data.map((dt, i) => (
-        <div key={i}>
-          <p>
-            <strong>{`$${dt.price}`}</strong> {`${dt.bedrooms} bedrooms |`}{" "}
-            {`${dt.sqft} sqft`}
-          </p>
-          <p>
-            <strong>{dt.address}</strong>
-          </p>
-          <p>For Sale | Zestimate $900,000</p>
-          <p>
-            <strong>Est. payment: $2,384/mo</strong>
-          </p>
-          <button
-            style={{ color: "blue", backgroundColor: "white", border: "black" }}
-          >
-            Contact Agent
-          </button>{" "}
-          <button style={{ color: "white", backgroundColor: "blue" }}>
-            Schedule a tour
-          </button>
-        </div>
-      ))}
+      {data.map((dt, i) => {
+        return (
+          <nav key={i}>
+            <p>
+              <strong>{`$${dt.price}`}</strong> {`${dt.bedrooms} bedrooms |`}{" "}
+              {`${dt.sqft} sqft`}
+            </p>
+            <p>
+              <strong>{dt.address}</strong>
+            </p>
+            <p>For Sale | Zestimate $900,000</p>
+            <p>
+              <strong>Est. payment: $2,384/mo</strong>
+            </p>
+            <button
+              style={{ color: "blue", backgroundColor: "white", border: "black" }}
+            >
+              Contact Agent
+            </button>{" "}
+            <button style={{ color: "white", backgroundColor: "blue" }}>
+              Schedule a tour
+            </button>
+          </nav>
+        );
+      })}
     </Fragment>
   );
 };
