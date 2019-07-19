@@ -12,6 +12,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../react-client/dist"));
 
+
+
+app.get('/:id', (req,res)=> {
+ res.sendFile('index.html', {root: __dirname + '/../react-client/dist'})
+})
+
 app.get('/houses/:id', (req, res) => {
   houseSchema.find({id: req.params.id}, (err, data) => {
     if (err) res.status(500).send(err);

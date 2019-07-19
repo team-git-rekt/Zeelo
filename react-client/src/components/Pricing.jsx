@@ -6,12 +6,12 @@ const Pricing = () => {
 
   useEffect(() => {
     const getHouses = async () => {
-      let res = await axios.get("http://localhost:3000:houses/1");
-      setData(res.data);
-    };
-    getHouses();
+      let res = await axios.get(`http://ec2-18-216-214-104.us-east-2.compute.amazonaws.com:3000/houses/${window.location.pathname.slice(1)}`);
+      setData(res.data)
+    }
+    getHouses()
     // preventDefault()
-  }, []);
+  }, [])
 
   return (
     <Fragment>
