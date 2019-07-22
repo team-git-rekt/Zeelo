@@ -6,7 +6,7 @@
   "scripts": {
     "db:setup": "node zeelo-database/seed.js",
     "start": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch"
+    "react-dev": "webpack --watch --mode production"
   },
   "repository": {
     "type": "git",
