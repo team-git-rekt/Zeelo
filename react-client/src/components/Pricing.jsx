@@ -12,7 +12,7 @@ const Pricing = () => {
     getHouses()
     // preventDefault()
   }, [])
-z
+
   return (
     <Fragment>
       {data.map((dt, i) => {
