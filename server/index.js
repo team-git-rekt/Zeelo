@@ -4,9 +4,11 @@ const port = 3000;
 const bodyParser = require("body-parser");
 const houseSchema = require("../zeelo-database/houseSchema.js");
 const cors = require('cors')
+const compression = require('compression')
 const morgan = require('morgan');
 
 app.use(morgan('dev'));
+app.use(compression())
 app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

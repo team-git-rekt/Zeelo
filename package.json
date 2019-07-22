@@ -36,6 +36,7 @@
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "cords": "^1.0.4",
     "cors": "^2.8.5",
     "eslint": "^6.0.1",
