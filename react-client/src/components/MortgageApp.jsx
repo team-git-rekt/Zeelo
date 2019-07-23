@@ -33,7 +33,7 @@ const MortgageApp = () => {
     <div>
       <nav className="navbar navbar-default">
         <div className="navbar-header">
-          <div className="navbar-brand">Mortgage Calculator</div>
+          <div className="navbar-brand">Yee Calculator</div>
         </div>
       </nav>
       <div className="container-fluid">
@@ -69,7 +69,7 @@ const MortgageApp = () => {
           </div>
           <div className="col-sm-8">
             <div>
-              <h2>Overpayment</h2>
+              <h2></h2>
               <label>Monthly</label>
               <input
                 type="number"
