@@ -8441,7 +8441,7 @@ var MortgageApp = function MortgageApp() {
         _react2.default.createElement(
           "div",
           { className: "navbar-brand" },
-          "Mortgage Overpayment Calculator"
+          "Mortgage Calculator"
         )
       )
     ),
@@ -43638,51 +43638,51 @@ exports.default = function (_ref) {
     return {
       interestTotal: acc.interestTotal + year.interestYearly,
       overpaymentTotal: acc.overpaymentTotal + year.overpayment,
-      rows: [].concat(_toConsumableArray(acc.rows), [[year.partial ? year.partial + 'm' : index + 1, Math.round(year.interestYearly || 0), Math.round(year.overpayment), Math.round(year.balance)]])
+      rows: [].concat(_toConsumableArray(acc.rows), [[year.partial ? year.partial + "m" : index + 1, Math.round(year.interestYearly || 0), Math.round(year.overpayment), Math.round(year.balance)]])
     };
   }, { interestTotal: 0, overpaymentTotal: 0, rows: [] });
 
   return _react2.default.createElement(
-    'table',
+    "table",
     { className: className },
     _react2.default.createElement(
-      'thead',
+      "thead",
       null,
       _react2.default.createElement(
-        'tr',
+        "tr",
         null,
         _react2.default.createElement(
-          'th',
+          "th",
           null,
-          'Years'
+          "Years"
         ),
         _react2.default.createElement(
-          'th',
+          "th",
           null,
-          'Interest'
+          "Interest"
         ),
         _react2.default.createElement(
-          'th',
+          "th",
           null,
-          'Overpayment'
+          "Overpayment"
         ),
         _react2.default.createElement(
-          'th',
+          "th",
           null,
-          'Balance'
+          "Balance"
         )
       )
     ),
     _react2.default.createElement(
-      'tbody',
+      "tbody",
       null,
       output.rows.map(function (row, index) {
         return _react2.default.createElement(
-          'tr',
+          "tr",
           { key: index },
           row.map(function (d, i) {
             return _react2.default.createElement(
-              'td',
+              "td",
               { key: i },
               d.toLocaleString()
             );
@@ -43691,22 +43691,22 @@ exports.default = function (_ref) {
       })
     ),
     _react2.default.createElement(
-      'tfoot',
+      "tfoot",
       null,
       _react2.default.createElement(
-        'tr',
+        "tr",
         null,
         _react2.default.createElement(
-          'td',
+          "td",
           { colSpan: 2 },
           Math.round(output.interestTotal).toLocaleString()
         ),
         _react2.default.createElement(
-          'td',
+          "td",
           null,
           Math.round(output.overpaymentTotal).toLocaleString()
         ),
-        _react2.default.createElement('td', null)
+        _react2.default.createElement("td", null)
       )
     )
   );
@@ -49404,30 +49404,30 @@ exports.default = function (_ref) {
     x.domain([0, payments.length - 1]);
     y.domain([payments[0].balance, 0]);
 
-    chartEl.select('.x').call((0, _d3Axis.axisBottom)(x).ticks(Math.min(payments.length, 30)));
+    chartEl.select(".x").call((0, _d3Axis.axisBottom)(x).ticks(Math.min(payments.length, 30)));
 
-    chartEl.select('.y').call((0, _d3Axis.axisLeft)(y));
+    chartEl.select(".y").call((0, _d3Axis.axisLeft)(y));
 
-    chartEl.select('.baseline').transition().attr('d', baseline(payments));
+    chartEl.select(".baseline").transition().attr("d", baseline(payments));
 
-    chartEl.select('.actual').transition().attr('d', actual(payments));
+    chartEl.select(".actual").transition().attr("d", actual(payments));
   }, [payments]);
 
   return _react2.default.createElement(
-    'svg',
+    "svg",
     {
       ref: chart,
-      height: '100%',
-      width: '100%',
-      viewBox: '0 0 ' + fullWidth + ' ' + fullHeight
+      height: "100%",
+      width: "100%",
+      viewBox: "0 0 " + fullWidth + " " + fullHeight
     },
     _react2.default.createElement(
-      'g',
-      { transform: 'translate(' + margin.left + ',' + margin.top + ')' },
-      _react2.default.createElement('g', { className: 'axis x', transform: 'translate(0, ' + height + ')' }),
-      _react2.default.createElement('g', { className: 'axis y' }),
-      _react2.default.createElement('path', { className: 'line baseline' }),
-      _react2.default.createElement('path', { className: 'line actual' })
+      "g",
+      { transform: "translate(" + margin.left + "," + margin.top + ")" },
+      _react2.default.createElement("g", { className: "axis x", transform: "translate(0, " + height + ")" }),
+      _react2.default.createElement("g", { className: "axis y" }),
+      _react2.default.createElement("path", { className: "line baseline" }),
+      _react2.default.createElement("path", { className: "line actual" })
     )
   );
 };

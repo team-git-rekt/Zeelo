@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default ({ payments, className }) => {
   let output = payments
@@ -10,7 +10,7 @@ export default ({ payments, className }) => {
         rows: [
           ...acc.rows,
           [
-            year.partial ? year.partial + 'm' : index + 1,
+            year.partial ? year.partial + "m" : index + 1,
             Math.round(year.interestYearly || 0),
             Math.round(year.overpayment),
             Math.round(year.balance)

@@ -33,7 +33,7 @@ const MortgageApp = () => {
     <div>
       <nav className="navbar navbar-default">
         <div className="navbar-header">
-          <div className="navbar-brand">Mortgage Overpayment Calculator</div>
+          <div className="navbar-brand">Mortgage Calculator</div>
         </div>
       </nav>
       <div className="container-fluid">
@@ -83,6 +83,7 @@ const MortgageApp = () => {
               <label>Month</label>
               <label>Amount</label>
             </div>
+            
             {overpayments.map(({ year, month, amount }, i) => (
               <div key={i}>
                 <input

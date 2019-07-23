@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
-import { select } from 'd3-selection';
-import { line } from 'd3-shape';
-import { scaleLinear } from 'd3-scale';
-import { axisBottom, axisLeft } from 'd3-axis';
-import 'd3-transition';
+import { select } from "d3-selection";
+import { line } from "d3-shape";
+import { scaleLinear } from "d3-scale";
+import { axisBottom, axisLeft } from "d3-axis";
+import "d3-transition";
 
 const margin = { top: 20, right: 20, bottom: 20, left: 80 },
   fullWidth = 800,
@@ -33,20 +33,20 @@ export default ({ payments }) => {
     y.domain([payments[0].balance, 0]);
 
     chartEl
-      .select('.x')
+      .select(".x")
       .call(axisBottom(x).ticks(Math.min(payments.length, 30)));
 
-    chartEl.select('.y').call(axisLeft(y));
+    chartEl.select(".y").call(axisLeft(y));
 
     chartEl
-      .select('.baseline')
+      .select(".baseline")
       .transition()
-      .attr('d', baseline(payments));
+      .attr("d", baseline(payments));
 
     chartEl
-      .select('.actual')
+      .select(".actual")
       .transition()
-      .attr('d', actual(payments));
+      .attr("d", actual(payments));
   }, [payments]);
 
   return (
