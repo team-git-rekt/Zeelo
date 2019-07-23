@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Table from "./MortgageTable.jsx"
 import Chart from "./MortgageChart.jsx"
 import calculate from "./MortgageCalculations.jsx"
+import '../../dist/app.css'
 
 const defaultOverpayment = { month: "1", year: "0", amount: "0" };
 
