@@ -40,7 +40,7 @@ const MortgageApp = () => {
         <div className="col-md-8 col-sm-12">
           <div className="col-sm-4">
             <div>
-              <h2>Initial</h2>
+              <h2></h2>
               <label>Amount</label>
               <input
                 maxLength={7}
