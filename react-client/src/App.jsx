@@ -8,6 +8,7 @@ const App = () => {
       <Pricing />
       <Overview />
       <Dropdown />
+      
     </div>
   );
 };

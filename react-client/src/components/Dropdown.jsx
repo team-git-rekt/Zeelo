@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Accordion, Card } from "react-bootstrap";
-import MortgageCalculator from "mortgage-calculator-react";
+import MortgageApp from './MortgageApp.jsx'
 
 const Dropdown = () => {
   return (
@@ -28,7 +28,7 @@ const Dropdown = () => {
             <Accordion.Collapse eventKey="1">
               <Card.Body>
                 <div>
-                  <MortgageCalculator />
+                  <MortgageApp />
                 </div>
               </Card.Body>
             </Accordion.Collapse>
